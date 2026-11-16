@@ -1,0 +1,24 @@
+{
+  "devices": {
+    "light.stairs_light": {
+      "type": "light",
+      "status": "online"
+    },
+    "sensor.stairs_top_presence": {
+      "type": "presence_sensor",
+      "status": "online"
+    },
+    "switch.server_power_plug": {
+      "type": "smart_plug",
+      "status": "online",
+      "protected": true
+    }
+  },
+  "rules": {
+    "rule_stairs_presence": {
+      "trigger": "sensor.stairs_top_presence",
+      "target": "light.stairs_light",
+      "enabled": true
+    }
+  }
+}
